@@ -2,10 +2,6 @@ const experess = require('express');
 const router = experess.Router();
 const controller = require('../controller');
 
-router.get('/', (req, res) => {
-  res.send('flipDeal');
-});
-
 router.get('/cart-total', controller.calculateTotalPrice);
 router.get('/membership-discount', controller.membershipDiscount);
 router.get('/calculate-tax', controller.calculateTotalCartTax);
